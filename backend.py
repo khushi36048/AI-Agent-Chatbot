@@ -28,6 +28,12 @@ def chat_endpoint(request: RequestState):
     response=get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provider)
     return response
 
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
+
 
 
 
