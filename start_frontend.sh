@@ -1,2 +1,2 @@
-#!/bin/bash
-streamlit run frontend.py --server.port 10001 --server.address 127.0.0.1
+port=${PORT:-8501}
+streamlit run frontend.py --server.port $port --server.address 0.0.0.0
